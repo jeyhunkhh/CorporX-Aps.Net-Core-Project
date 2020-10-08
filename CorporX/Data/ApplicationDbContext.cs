@@ -1,5 +1,7 @@
 ﻿using CorporX.Controllers;
 using CorporX.Models;
+using CorporX.Models.About;
+using CorporX.Models.AboutUs;
 using CorporX.Models.Home;
 using CorporX.Models.Project;
 using CorporX.Models.Services;
@@ -33,6 +35,15 @@ namespace CorporX.Data
 
         public DbSet<ServicesDetails> ServicesDetail { get; set; }
         public DbSet<ProjectDetails> ProjectDetails { get; set; }
+
+        public DbSet<AboutUsTeam> AboutUsTeams { get; set; }
+        public DbSet<AboutUsMission> AboutUsMissions { get; set; }
+        public DbSet<AboutUsPromo> AboutUsPromos { get; set; }
+        public DbSet<AboutUsSliderHeader> AboutUsSliderHeaders { get; set; }
+        public DbSet<AboutUsWorkProcess> AboutUsWorkProcesses { get; set; }
+        public DbSet<AboutUsWorkProcessItems> AboutUsWorkProcessItems { get; set; }
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<SliderItems> SliderItems { get; set; }
 
     }
 }
