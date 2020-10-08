@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ceyhun\\source\\repos\\CorporX\\CorporX.csproj": {}
+    "C:\\Users\\Ceyhun\\Desktop\\CorporX-Aps.Net-Core-Project\\CorporX\\CorporX.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ceyhun\\source\\repos\\CorporX\\CorporX.csproj": {
+    "C:\\Users\\Ceyhun\\Desktop\\CorporX-Aps.Net-Core-Project\\CorporX\\CorporX.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ceyhun\\source\\repos\\CorporX\\CorporX.csproj",
+        "projectUniqueName": "C:\\Users\\Ceyhun\\Desktop\\CorporX-Aps.Net-Core-Project\\CorporX\\CorporX.csproj",
         "projectName": "CorporX",
-        "projectPath": "C:\\Users\\Ceyhun\\source\\repos\\CorporX\\CorporX.csproj",
+        "projectPath": "C:\\Users\\Ceyhun\\Desktop\\CorporX-Aps.Net-Core-Project\\CorporX\\CorporX.csproj",
         "packagesPath": "C:\\Users\\Ceyhun\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ceyhun\\source\\repos\\CorporX\\obj\\",
+        "outputPath": "C:\\Users\\Ceyhun\\Desktop\\CorporX-Aps.Net-Core-Project\\CorporX\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ceyhun\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -38,6 +38,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Cloudinary.Core": {
+              "target": "Package",
+              "version": "[1.31.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.8, )"

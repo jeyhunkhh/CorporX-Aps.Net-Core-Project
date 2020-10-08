@@ -15,7 +15,7 @@ namespace CorporX.Models.Home
         public string FullName { get; set; }
 
         [Required]
-        [MaxLength(100)]
+        [MaxLength(300)]
         public string Content { get; set; }
 
         [Required]
@@ -25,6 +25,9 @@ namespace CorporX.Models.Home
         [MaxLength(50)]
         public string Position { get; set; }
 
+        [Required]
+        [MaxLength(100)]
+        public string Photo { get; set; }
 
     }
 }

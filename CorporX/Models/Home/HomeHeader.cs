@@ -13,7 +13,7 @@ namespace CorporX.Models.Home
         public string Heading { get; set; }
 
         [Required]
-        [MaxLength(50)]
+        [MaxLength(100)]
         public string Photo { get; set; }
 
     }

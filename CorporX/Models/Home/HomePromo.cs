@@ -11,6 +11,5 @@ namespace CorporX.Models.Home
         [Required]
         [MaxLength(50)]
         public string Icon { get; set; }
-
     }
 }

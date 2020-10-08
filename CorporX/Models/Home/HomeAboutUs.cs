@@ -9,7 +9,7 @@ namespace CorporX.Models.Home
     public class HomeAboutUs : BaseEntity
     {
         [Required]
-        [MaxLength(200)]
+        [MaxLength(500)]
         public string Text { get; set; }
 
         [Required]

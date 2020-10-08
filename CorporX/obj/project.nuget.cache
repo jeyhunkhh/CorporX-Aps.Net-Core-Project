@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "RdIcTQo04xofEnh0eUYkI7E0C+lDDN/9lI/jkNTk+89ZNKpsxY1dnLisRT2ifBPCktnALD7TVZVT7tyL8Z+Vgg==",
+  "dgSpecHash": "fBHBhl+798Sp8L2L9WLiFK+7BLMhbCo2aPrZLLpymyDrvteCzrOfWNhGf4eG489BJTy+aK5xftZEK86eyu/VGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ceyhun\\source\\repos\\CorporX\\CorporX.csproj",
+  "projectFilePath": "C:\\Users\\Ceyhun\\Desktop\\CorporX-Aps.Net-Core-Project\\CorporX\\CorporX.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ceyhun\\.nuget\\packages\\cloudinary.core\\1.31.0\\cloudinary.core.1.31.0.nupkg.sha512",
     "C:\\Users\\Ceyhun\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Ceyhun\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\Ceyhun\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",

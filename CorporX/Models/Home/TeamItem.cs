@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CorporX.Models.Home
 {
-    public class HomeTeamItem
+    public class TeamItem
     {
         public int Id { get; set; }
 
@@ -19,7 +19,7 @@ namespace CorporX.Models.Home
         public string Position { get; set; }
 
         [Required]
-        [MaxLength(100)]
+        [MaxLength(300)]
         public string Content { get; set; }
 
         [Required]

@@ -1,8 +1,28 @@
-﻿<!--body content wrap start-->
+﻿@model ProjectViewModel
+<!--body content wrap start-->
 <div class="main">
 
     <partial name="_Breadcrumb" />
-    <partial name="_Portfolio" />
+
+    <!--our work or portfolio section start-->
+    <section class="our-portfolio-section ptb-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-heading text-center mb-5">
+                        <h2>Check Our Quality Work</h2>
+                        <p class="lead">
+                            Dynamically pursue reliable convergence rather than 24/7 process improvements. Intrinsicly
+                            develop end-to-end customer service without extensive data.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <partial name="_Portfolio" model="Model.ProjectDetails" />
+        </div>
+    </section>
+    <!--our work or portfolio section end-->
+    
     <!--counter section start-->
     <section class="call-to-action ptb-100 gradient-overlay" style="background: url('img/slider-img-3.jpg')no-repeat top center / cover fixed">
         <div class="container">
@@ -22,6 +42,7 @@
         </div>
     </section>
     <!--counter section end-->
+
     <!--our pricing section start-->
     <section class="pricing-section ptb-100 gray-light-bg">
         <div class="container">
@@ -111,9 +132,10 @@
         </div>
     </section>
     <!--our pricing section end-->
+
     <partial name="_Slider" />
     <partial name="_Client" />
-    
+
 
 </div>
 <!--body content wrap end-->

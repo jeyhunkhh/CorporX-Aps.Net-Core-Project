@@ -69,32 +69,12 @@
     {
     <header class="header">
         <!--topbar start-->
-        <div id="header-top-bar" class="primary-bg py-2">
-            <div class="container">
-                <div class="row justify-content-between align-items-center">
-                    <div class="col-md-7 col-lg-7 d-none d-md-block d-lg-block">
-                        <div class="topbar-text text-white">
-                            <ul class="list-inline">
-                                <li class="list-inline-item"><span class="fas fa-envelope mr-1"></span> <a href="mailto:support@yourdomain.com">support@yourdomain.com</a></li>
-                                <li class="list-inline-item"><span class="fas fa-map-marker mr-1"></span> Address CA-234/B New York, USA</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-lg-4">
-                        <div class="topbar-text text-white">
-                            <ul class="list-inline text-md-right text-lg-right text-left">
-                                <li class="list-inline-item"><span class="ti-phone mr-2"></span> Call Now: <strong>883-4565-123456</strong></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <vc:header-component></vc:header-component>
         <!--topbar end-->
         <!--start navbar-->
         <nav class="navbar navbar-expand-lg fixed-top white-bg">
             <div class="container">
-                <a class="navbar-brand" href="index-2.html">
+                <a class="navbar-brand" asp-controller="home" asp-action="index">
                     <img src="~/img/logo-color.png" alt="logo" class="img-fluid" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -103,54 +83,19 @@
                 </button>
                 <div class="collapse navbar-collapse h-auto" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto menu">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Home</a>
-                            <ul class="sub-menu dropdown-menu">
-                                <li><a href="index-2.html">Home Page 01</a></li>
-                                <li><a href="index-3.html">Home Page 02</a></li>
-                                <li><a href="index-4.html">Home Page 03</a></li>
-                                <li><a href="index-5.html">Home Page 04</a></li>
-                                <li><a href="index-6.html">Home Page 05</a></li>
-                                <li><a href="index-7.html">Home Page 06</a></li>
-                            </ul>
-                        </li>
+                        <li><a asp-controller="home" asp-action="index"> Home</a></li>
                         <li><a asp-controller="aboutus" asp-action="index">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages</a>
-                            <ul class="sub-menu dropdown-menu">
-                                <li><a href="team.html">Our Team Members</a></li>
-                                <li><a href="team-single.html">Team Member Profile</a></li>
-                                <li><a href="project-details.html">Project Details </a></li>
-                                <li><a href="services-details.html">Services Details</a></li>
-                                <li><a href="basic-login.html">Login Page 1</a></li>
-                                <li><a href="login.html">Login Page 2</a></li>
-                                <li><a href="basic-sign-up.html">Signup Page 1</a></li>
-                                <li><a href="sign-up.html">Signup Page 2</a></li>
-                                <li><a href="password-reset.html">Reset Password</a></li>
-                                <li><a href="change-password.html">Change Password</a></li>
-                                <li><a href="download.html">Download Page</a></li>
-                                <li><a href="review.html">Review Page</a></li>
-                                <li><a href="faq.html">FAQ Page</a></li>
-                                <li><a href="404.html">404 Page</a></li>
-                                <li><a href="coming-soon.html">Coming Soon</a></li>
-                                <li><a href="thank-you.html">Thank You Page</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="project.html">Project</a></li>
+                        <li><a asp-controller="services" asp-action="index">Services</a></li>
+                        <li><a asp-controller="project" asp-action="index">Project</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog</a>
                             <ul class="sub-menu dropdown-menu">
-                                <li><a href="blog-default.html">Blog Grid</a></li>
-                                <li><a href="blog-no-sidebar.html">Blog No Sidebar</a></li>
-                                <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                <li><a href="blog-right-sidebar-2.html">Blog Right Sidebar 02</a></li>
-                                <li><a href="blog-single-left-sidebar.html">Details Left Sidebar</a></li>
-                                <li><a href="blog-single-right-sidebar.html">Details Right Sidebar</a></li>
+                                <li><a asp-controller="blog" asp-action="index">Blog Grid</a></li>
+                                <li><a asp-controller="blog" asp-action="blogleftsidebar">Blog Left Sidebar</a></li>
                             </ul>
                         </li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a asp-controller="faq" asp-action="index">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -163,7 +108,7 @@
         <!--start navbar-->
         <nav class="navbar navbar-expand-lg fixed-top bg-transparent">
             <div class="container">
-                <a class="navbar-brand" href="index-2.html">
+                <a class="navbar-brand" asp-controller="home" asp-action="index">
                     <img src="~/img/logo-white.png" alt="logo" class="img-fluid" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -172,54 +117,19 @@
                 </button>
                 <div class="collapse navbar-collapse h-auto" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto menu">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Home</a>
-                            <ul class="sub-menu dropdown-menu">
-                                <li><a href="index-2.html">Home Page 01</a></li>
-                                <li><a href="index-3.html">Home Page 02</a></li>
-                                <li><a href="index-4.html">Home Page 03</a></li>
-                                <li><a href="index-5.html">Home Page 04</a></li>
-                                <li><a href="index-6.html">Home Page 05</a></li>
-                                <li><a href="index-7.html">Home Page 06</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages</a>
-                            <ul class="sub-menu dropdown-menu">
-                                <li><a href="team.html">Our Team Members</a></li>
-                                <li><a href="team-single.html">Team Member Profile</a></li>
-                                <li><a href="project-details.html">Project Details </a></li>
-                                <li><a href="services-details.html">Services Details</a></li>
-                                <li><a href="basic-login.html">Login Page 1</a></li>
-                                <li><a href="login.html">Login Page 2</a></li>
-                                <li><a href="basic-sign-up.html">Signup Page 1</a></li>
-                                <li><a href="sign-up.html">Signup Page 2</a></li>
-                                <li><a href="password-reset.html">Reset Password</a></li>
-                                <li><a href="change-password.html">Change Password</a></li>
-                                <li><a href="download.html">Download Page</a></li>
-                                <li><a href="review.html">Review Page</a></li>
-                                <li><a href="faq.html">FAQ Page</a></li>
-                                <li><a href="404.html">404 Page</a></li>
-                                <li><a href="coming-soon.html">Coming Soon</a></li>
-                                <li><a href="thank-you.html">Thank You Page</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="project.html">Project</a></li>
+                        <li><a asp-controller="home" asp-action="index"> Home</a></li>
+                        <li><a asp-controller="aboutus" asp-action="index">About Us</a></li>
+                        <li><a asp-controller="services" asp-action="index">Services</a></li>
+                        <li><a asp-controller="project" asp-action="index">Project</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog</a>
                             <ul class="sub-menu dropdown-menu">
-                                <li><a href="blog-default.html">Blog Grid</a></li>
-                                <li><a href="blog-no-sidebar.html">Blog No Sidebar</a></li>
-                                <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                <li><a href="blog-right-sidebar-2.html">Blog Right Sidebar 02</a></li>
-                                <li><a href="blog-single-left-sidebar.html">Details Left Sidebar</a></li>
-                                <li><a href="blog-single-right-sidebar.html">Details Right Sidebar</a></li>
+                                <li><a asp-controller="blog" asp-action="index">Blog Grid</a></li>
+                                <li><a asp-controller="blog" asp-action="blogleftsidebar">Blog Left Sidebar</a></li>
                             </ul>
                         </li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a asp-controller="faq" asp-action="index">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -397,7 +307,7 @@
     <script src="~/js/wow.min.js"></script>
     <!--owl carousel js-->
     <script src="~/js/owl.carousel.min.js"></script>
-    <!--countdown js-->e
+    <!--countdown js-->
     <script src="~/js/jquery.countdown.min.js"></script>
     <!--custom js-->
     <script src="~/js/scripts.js"></script>

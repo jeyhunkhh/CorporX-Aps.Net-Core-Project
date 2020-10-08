@@ -2,6 +2,23 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "Cloudinary.Core/1.31.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1",
+          "System.ComponentModel.Primitives": "4.3.0",
+          "System.IO.FileSystem": "4.3.0",
+          "System.Net.Http": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.6/Cloudinary.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/Cloudinary.Core.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -1182,7 +1199,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.0/_._": {}
+          "ref/netstandard1.0/System.ComponentModel.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.ComponentModel.dll": {}
@@ -1205,7 +1222,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.0/_._": {}
+          "ref/netstandard1.0/System.ComponentModel.Primitives.dll": {}
         },
         "runtime": {
           "lib/netstandard1.0/System.ComponentModel.Primitives.dll": {}
@@ -2566,6 +2583,18 @@
     }
   },
   "libraries": {
+    "Cloudinary.Core/1.31.0": {
+      "sha512": "w2mz3NhHjRWqUKTFkVX1oJ341AlwWHm42/GSjxm7MfuJcaronPfdEOD+iCa7IVxcYGhrs/DTjMP9OdHO9+KJVw==",
+      "type": "package",
+      "path": "cloudinary.core/1.31.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "cloudinary.core.1.31.0.nupkg.sha512",
+        "cloudinary.core.nuspec",
+        "lib/netstandard1.6/Cloudinary.Core.dll"
+      ]
+    },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
       "sha512": "Y4rs5aMEXY8G7wJo5S3EEt6ltqyOTr/qOeZzfn+hw/fuQj5GppGckMY5psGLETo1U9hcT5MmAhaT5xtusM1b5g==",
       "type": "package",
@@ -8431,6 +8460,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Cloudinary.Core >= 1.31.0",
       "Microsoft.EntityFrameworkCore >= 3.1.8",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.8",
@@ -8443,11 +8473,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ceyhun\\source\\repos\\CorporX\\CorporX.csproj",
+      "projectUniqueName": "C:\\Users\\Ceyhun\\Desktop\\CorporX-Aps.Net-Core-Project\\CorporX\\CorporX.csproj",
       "projectName": "CorporX",
-      "projectPath": "C:\\Users\\Ceyhun\\source\\repos\\CorporX\\CorporX.csproj",
+      "projectPath": "C:\\Users\\Ceyhun\\Desktop\\CorporX-Aps.Net-Core-Project\\CorporX\\CorporX.csproj",
       "packagesPath": "C:\\Users\\Ceyhun\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ceyhun\\source\\repos\\CorporX\\obj\\",
+      "outputPath": "C:\\Users\\Ceyhun\\Desktop\\CorporX-Aps.Net-Core-Project\\CorporX\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ceyhun\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8474,6 +8504,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "Cloudinary.Core": {
+            "target": "Package",
+            "version": "[1.31.0, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[3.1.8, )"

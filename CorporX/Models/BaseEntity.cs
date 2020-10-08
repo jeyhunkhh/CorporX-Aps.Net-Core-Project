@@ -15,7 +15,7 @@ namespace CorporX.Models
         public string Title { get; set; }
 
         [Required]
-        [MaxLength(250)]
+        [MaxLength(300)]
         public string Content { get; set; }
 
     }
