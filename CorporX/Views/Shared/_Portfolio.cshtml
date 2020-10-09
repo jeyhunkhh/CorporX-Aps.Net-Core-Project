@@ -12,7 +12,7 @@
                 {
                 <div class="mix portfolio-item Category" data-ref="mixitup-target">
                     <div class="portfolio-wrapper">
-                        <a href="project-details.html" target="_blank">
+                        <a asp-controller="project" asp-action="projectdetails" asp-route-id="@item.Id" target="_blank">
                             <div class="content-overlay"></div>
                             <img class="img-fluid" src="@item.Photo" alt="portfolio" />
                             <div class="content-details fadeIn-bottom text-white">

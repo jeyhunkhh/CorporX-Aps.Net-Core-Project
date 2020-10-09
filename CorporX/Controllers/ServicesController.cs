@@ -52,8 +52,7 @@ namespace CorporX.Controllers
                 return RedirectToAction("index", "services");
             }
 
-            return NoContent();
-                
+            return NoContent();   
         }
 
 
@@ -62,7 +61,7 @@ namespace CorporX.Controllers
         {
             if (!_context.ServicesDetail.Any(x => x.Id == Id))
             {
-                return RedirectToAction("index", "_404");
+                return RedirectToAction("index", "error404");
             }
 
             ServicesDetialsViewModel servicesDetialsViewModel = new ServicesDetialsViewModel

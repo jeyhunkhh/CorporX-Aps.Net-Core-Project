@@ -31,9 +31,19 @@ namespace CorporX.Controllers
         }
 
         [Route("project-details")]
-        public IActionResult ProjectDetails()
+        public IActionResult ProjectDetails(int Id)
         {
-            return View();
+            if(!_context.ProjectDetails.Any(x=>x.Id == Id))
+            {
+                return RedirectToAction("index", "error404");
+            }
+
+            ProjectDetialsViewModel projectDetialsViewModel = new ProjectDetialsViewModel
+            {
+                ProjectDetails = _context.ProjectDetails.FirstOrDefault(x => x.Id == Id)
+            };
+
+            return View(projectDetialsViewModel);
         }
     }
 }

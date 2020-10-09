@@ -2,6 +2,7 @@
 using CorporX.Models;
 using CorporX.Models.About;
 using CorporX.Models.AboutUs;
+using CorporX.Models.FAQ;
 using CorporX.Models.Home;
 using CorporX.Models.Project;
 using CorporX.Models.Services;
@@ -52,5 +53,7 @@ namespace CorporX.Data
         public DbSet<Pricing> Pricings { get; set; }
         public DbSet<PricingItem> PricingItems { get; set; }
 
+        public DbSet<FAQ> FAQs { get; set; }
+        public DbSet<PricingFAQ> PricingFAQs { get; set; }
     }
 }

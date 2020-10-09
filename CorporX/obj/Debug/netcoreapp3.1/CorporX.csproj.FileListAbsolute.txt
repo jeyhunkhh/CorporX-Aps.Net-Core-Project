@@ -323,4 +323,4 @@ C:\Users\Ceyhun\Desktop\CorporX-Aps.Net-Core-Project\CorporX\obj\Debug\netcoreap
 C:\Users\Ceyhun\Desktop\CorporX-Aps.Net-Core-Project\CorporX\obj\Debug\netcoreapp3.1\CorporX.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Ceyhun\Desktop\CorporX-Aps.Net-Core-Project\CorporX\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\HeaderComponent\Default.cshtml.g.cs
 C:\Users\Ceyhun\Desktop\CorporX-Aps.Net-Core-Project\CorporX\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\FooterComponent\Default.cshtml.g.cs
-C:\Users\Ceyhun\Desktop\CorporX-Aps.Net-Core-Project\CorporX\obj\Debug\netcoreapp3.1\Razor\Views\_404\Index.cshtml.g.cs
+C:\Users\Ceyhun\Desktop\CorporX-Aps.Net-Core-Project\CorporX\obj\Debug\netcoreapp3.1\Razor\Views\Error404\Index.cshtml.g.cs
