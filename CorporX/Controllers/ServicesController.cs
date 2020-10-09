@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CorporX.Data;
+using CorporX.Models.Services;
 using CorporX.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,18 +21,56 @@ namespace CorporX.Controllers
         [Route("services")]
         public IActionResult Index()
         {
-            ServicesDetialsViewModel DetialsViewModel = new ServicesDetialsViewModel
+            ServicesViewModel ServicesViewModel = new ServicesViewModel
             {
                 ServicesDetails = _context.ServicesDetail.ToList(),
+                Clients = _context.Clients.ToList(),
+                ServicesDetailsHeaders = _context.ServicesDetailsHeaders.FirstOrDefault(),
+                ServisPromos = _context.ServisPromos.ToList(),
+                Settings = _context.Setting.FirstOrDefault()
             };
-            return View(DetialsViewModel);
+
+            return View(ServicesViewModel);
         }
 
-        [Route("services-details")]
-        public IActionResult ServicesDetails()
+        [HttpPost]
+        [Route("services")]
+        public IActionResult Send(ServicesViewModel model)
         {
-           
-            return View();
+            if (ModelState.IsValid)
+            {
+                Message message = new Message
+                {
+                    FullName = model.Message.FullName,
+                    Email = model.Message.Email,
+                    MessageText = model.Message.MessageText
+                };
+
+                _context.Messages.Add(message);
+                _context.SaveChanges();
+
+                return RedirectToAction("index", "services");
+            }
+
+            return NoContent();
+                
+        }
+
+
+        [Route("services-details")]
+        public IActionResult ServicesDetails(int Id)
+        {
+            if (!_context.ServicesDetail.Any(x => x.Id == Id))
+            {
+                return RedirectToAction("index", "_404");
+            }
+
+            ServicesDetialsViewModel servicesDetialsViewModel = new ServicesDetialsViewModel
+            {
+                ServicesDetails = _context.ServicesDetail.FirstOrDefault(x=>x.Id == Id)
+            };
+
+            return View(servicesDetialsViewModel);
         }
     }
 }

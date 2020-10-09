@@ -45,5 +45,12 @@ namespace CorporX.Data
         public DbSet<Client> Clients { get; set; }
         public DbSet<SliderItems> SliderItems { get; set; }
 
+        public DbSet<Message> Messages { get; set; }
+        public DbSet<ServicesDetailsHeader> ServicesDetailsHeaders { get; set; }
+        public DbSet<ServisPromo> ServisPromos { get; set; }
+
+        public DbSet<Pricing> Pricings { get; set; }
+        public DbSet<PricingItem> PricingItems { get; set; }
+
     }
 }

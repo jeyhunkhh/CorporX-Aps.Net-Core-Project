@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using CorporX.Models.Project;
+using CorporX.Models.AboutUs;
 
 namespace CorporX.ViewModels
 {
     public class ProjectViewModel
     {
-        public List<Models.Project.ProjectDetails> ProjectDetails { get; set; }
+        public List<ProjectDetails> ProjectDetails { get; set; }
+        public List<SliderItems> SliderItems { get; set; }
+        public List<Client> Clients { get; set; }
+        public List<Pricing> Pricings { get; set; }
+        public List<PricingItem> PricingItems { get; set; }
     }
 }

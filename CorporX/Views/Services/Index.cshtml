@@ -1,4 +1,4 @@
-﻿@model ServicesDetialsViewModel
+﻿@model ServicesViewModel
 <!--body content wrap start-->
 <div class="main">
 
@@ -117,21 +117,23 @@
                 <div class="col-md-6">
                     <div class="contact-us-form gray-light-bg rounded p-5">
                         <h4>Ready to get started?</h4>
-                        <form action="#" method="POST" id="contactForm" class="contact-us-form">
+                        <form method="POST" id="contactForm" class="contact-us-form">
                             <div class="form-row">
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="name" placeholder="Enter name" required="required">
+                                        <input asp-for="@Model.Message.FullName" class="form-control" placeholder="Enter name">
+                                        <span asp-validation-for="@Model.Message.FullName" class="text-danger"></span>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" name="email" placeholder="Enter email" required="required">
+                                        <input asp-for="@Model.Message.Email" class="form-control" placeholder="Enter email">
+                                        <span asp-validation-for="@Model.Message.Email" class="text-danger"></span>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea name="message" id="message" class="form-control" rows="7" cols="25" placeholder="Message"></textarea>
+                                        <textarea asp-for="@Model.Message.MessageText" class="form-control" rows="7" cols="25" placeholder="Message"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 mt-3">
@@ -154,12 +156,11 @@
 
                         <h5>Our Headquarters</h5>
                         <address>
-                            100 yellow house, Mn <br>
-                            Factory, United State, 13420
+                            @Model.Settings.Address
                         </address>
                         <br>
-                        <span>Phone: +1234567890123</span> <br>
-                        <span>Email: <a href="mailto:email@yourdomain.com" class="link-color">email@yourdomain.com</a></span>
+                        <span>Phone: +@Model.Settings.Phone</span> <br>
+                        <span>Email: <a href="@Model.Settings.Email" class="link-color">@Model.Settings.Email</a></span>
 
                     </div>
                 </div>
@@ -167,8 +168,12 @@
         </div>
     </section>
     <!--contact us section end-->
-    <partial name="_Client" />
+    <partial name="_Client" model="Model.Clients" />
 
 
 </div>
 <!--body content wrap end-->
+@section Scripts{
+    <script src="~/libs/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/libs/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

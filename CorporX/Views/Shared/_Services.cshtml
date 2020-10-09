@@ -13,7 +13,7 @@
                         <p class="mb-0">
                           @item.ShowContent  
                         </p>
-                        <a href="services-details.html" target="_blank" class="detail-link mt-3">Read more <span class="ti-arrow-right"></span></a>
+                        <a asp-controller="services" asp-action="servicesdetails" asp-route-id="@item.Id" target="_blank" class="detail-link mt-3">Read more <span class="ti-arrow-right"></span></a>
                     </div>
                 </div>
             </div>

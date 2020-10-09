@@ -21,7 +21,11 @@ namespace CorporX.Controllers
         {
             ProjectViewModel projectViewModel = new ProjectViewModel
             {
-                ProjectDetails = _context.ProjectDetails.ToList()
+                ProjectDetails = _context.ProjectDetails.ToList(),
+                SliderItems = _context.SliderItems.ToList(),
+                Clients = _context.Clients.ToList(),
+                PricingItems = _context.PricingItems.ToList(),
+                Pricings = _context.Pricings.ToList()
             };
             return View(projectViewModel);
         }
