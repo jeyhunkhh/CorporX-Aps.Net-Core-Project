@@ -5,27 +5,7 @@
 <!--body content wrap start-->
 <div class="main">
 
-    <!--hero section start-->
-    <section class="hero-section ptb-100 gradient-overlay"
-             style="background: url('img/header-bg-5.jpg')no-repeat center center / cover">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-md-9 col-lg-7">
-                    <div class="page-header-content text-white text-center pt-sm-5 pt-md-5 pt-lg-0">
-                        <h1 class="text-white mb-0">FAQ Page</h1>
-                        <div class="custom-breadcrumb">
-                            <ol class="breadcrumb d-inline-block bg-transparent list-inline py-0">
-                                <li class="list-inline-item breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="list-inline-item breadcrumb-item"><a href="#">Pages</a></li>
-                                <li class="list-inline-item breadcrumb-item active">Faq</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--hero section end-->
+    <partial name="_Breadcrumb" model="Model.BreadcrumbViewModel" />
     <!--promo section start-->
     <section class="promo-section ptb-100">
         <div class="container">
@@ -42,25 +22,25 @@
             <!--pricing faq start-->
             <div class="row">
                 <div class="col-lg-6">
-                        <div id="accordion-1" class="accordion accordion-faq">
-                            @foreach (var item in Model.FAQs.Take(3))
-                            {
-                                <div class="card">
-                                    <div class="card-header py-4" id="heading-1-1" data-toggle="collapse" role="button"
-                                         data-target="#collapse-1-@count" aria-expanded="false" aria-controls="collapse-1-@count">
-                                        <h6 class="mb-0"><span class="ti-receipt mr-3"></span>@item.Title</h6>
-                                    </div>
-                                    <div id="collapse-1-@count" class="collapse" aria-labelledby="heading-1-@count"
-                                         data-parent="#accordion-1">
-                                        <div class="card-body">
-                                            <p>@item.Content</p>
-                                        </div>
+                    <div id="accordion-1" class="accordion accordion-faq">
+                        @foreach (var item in Model.FAQs.Take(3))
+                        {
+                            <div class="card">
+                                <div class="card-header py-4" id="heading-1-1" data-toggle="collapse" role="button"
+                                     data-target="#collapse-1-@count" aria-expanded="false" aria-controls="collapse-1-@count">
+                                    <h6 class="mb-0"><span class="ti-receipt mr-3"></span>@item.Title</h6>
+                                </div>
+                                <div id="collapse-1-@count" class="collapse" aria-labelledby="heading-1-@count"
+                                     data-parent="#accordion-1">
+                                    <div class="card-body">
+                                        <p>@item.Content</p>
                                     </div>
                                 </div>
-                                <p class="d-none">@(count++)</p>
-                            }
-                        </div>
+                            </div>
+                            <p class="d-none">@(count++)</p>
+                        }
                     </div>
+                </div>
                 <div class="col-lg-6">
                     <div id="accordion-2" class="accordion accordion-faq">
                         @foreach (var item in Model.FAQs.Skip(3).Take(3))

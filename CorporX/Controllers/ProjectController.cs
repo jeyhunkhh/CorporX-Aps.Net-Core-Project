@@ -25,7 +25,16 @@ namespace CorporX.Controllers
                 SliderItems = _context.SliderItems.ToList(),
                 Clients = _context.Clients.ToList(),
                 PricingItems = _context.PricingItems.ToList(),
-                Pricings = _context.Pricings.ToList()
+                Pricings = _context.Pricings.ToList(),
+                BreadcrumbViewModel = new BreadcrumbViewModel
+                {
+                    Title = "Our Projects",
+                    Links = new List<string>
+                    {
+                        "Home,home,index",
+                        "Projects,project,index"
+                    }
+                }
             };
             return View(projectViewModel);
         }
@@ -40,7 +49,17 @@ namespace CorporX.Controllers
 
             ProjectDetialsViewModel projectDetialsViewModel = new ProjectDetialsViewModel
             {
-                ProjectDetails = _context.ProjectDetails.FirstOrDefault(x => x.Id == Id)
+                ProjectDetails = _context.ProjectDetails.FirstOrDefault(x => x.Id == Id),
+                BreadcrumbViewModel = new BreadcrumbViewModel
+                {
+                    Title = "Project Details",
+                    Links = new List<string>
+                    {
+                        "Home,home,index",
+                        "Projects,project,index",
+                        "Project Details,project,projectdetails"
+                    }
+                }
             };
 
             return View(projectDetialsViewModel);

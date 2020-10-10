@@ -180,7 +180,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                @foreach (var item in Model.HomeBlogItem)
+                @foreach (var item in Model.HomeBlogItem.Take(3))
                 {
                     <div class="col-md-6 col-lg-4">
                         <div class="single-blog-card card border-0 shadow-sm">

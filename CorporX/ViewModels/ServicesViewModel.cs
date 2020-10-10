@@ -13,6 +13,6 @@ namespace CorporX.ViewModels
         public List<ServisPromo> ServisPromos { get; set; }
         public Message Message { get; set; }
         public Setting Settings { get; set; }
-
+        public BreadcrumbViewModel BreadcrumbViewModel { get; set; }
     }
 }

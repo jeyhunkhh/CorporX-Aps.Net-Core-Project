@@ -21,7 +21,17 @@ namespace CorporX.Controllers
             FAQViewModel FAQViewModel = new FAQViewModel
             {
                 PricingFAQs = _context.PricingFAQs.ToList(),
-                FAQs = _context.FAQs.ToList()
+                FAQs = _context.FAQs.ToList(),
+                BreadcrumbViewModel = new BreadcrumbViewModel
+                {
+                    Title = "FAQ Page",
+                    Links = new List<string>
+                    {
+                        "Home,home,index",
+                        "FAQ Page,FAQ,index"
+                    }
+                }
+
             };
 
             return View(FAQViewModel);

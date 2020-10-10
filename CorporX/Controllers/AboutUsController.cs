@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using CorporX.Data;
-using CorporX.Models.AboutUs;
 using CorporX.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -31,7 +28,16 @@ namespace CorporX.Controllers
                 AboutUsWorkProcess = _context.AboutUsWorkProcesses.FirstOrDefault(),
                 AboutUsWorkProcessItems = _context.AboutUsWorkProcessItems.ToList(),
                 Clients = _context.Clients.ToList(),
-                SliderItems = _context.SliderItems.ToList()
+                SliderItems = _context.SliderItems.ToList(),
+                BreadcrumbViewModel = new BreadcrumbViewModel
+                {
+                    Title = "About Us",
+                    Links = new List<string>
+                    {
+                        "Home,home,index",
+                        "About Us,aboutus,index"
+                    }
+                }
             };
 
             return View(aboutUsViewModel);

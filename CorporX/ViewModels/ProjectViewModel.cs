@@ -12,5 +12,7 @@ namespace CorporX.ViewModels
         public List<Client> Clients { get; set; }
         public List<Pricing> Pricings { get; set; }
         public List<PricingItem> PricingItems { get; set; }
+        public BreadcrumbViewModel BreadcrumbViewModel { get; set; }
+
     }
 }

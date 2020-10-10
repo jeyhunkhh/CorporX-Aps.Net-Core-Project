@@ -1,16 +1,21 @@
-﻿<!--header section start-->
+﻿@model BreadcrumbViewModel
+<!--header section start-->
 <section class="hero-section ptb-100 gradient-overlay"
-         style="background: url('img/header-bg-5.jpg')no-repeat center center / cover">
+         style="background: url('https://res.cloudinary.com/djsws5hil/image/upload/v1602055768/CorporX/Blog/1-w_ezb9of.jpg')no-repeat center center / cover">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-7">
                 <div class="page-header-content text-white text-center pt-sm-5 pt-md-5 pt-lg-0">
-                    <h1 class="text-white mb-0">About Us</h1>
+                    <h1 class="text-white mb-0">@Model.Title</h1>
                     <div class="custom-breadcrumb">
                         <ol class="breadcrumb d-inline-block bg-transparent list-inline py-0">
-                            <li class="list-inline-item breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="list-inline-item breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="list-inline-item breadcrumb-item active">About Us</li>
+                            @if (Model != null)
+                            {
+                                foreach (var item in Model.Links)
+                                {
+                                    <li class="list-inline-item breadcrumb-item"><a asp-controller="@item.Split(",")[1]" asp-action="@item.Split(",")[2]">@item.Split(",")[0]</a></li>
+                                }
+                            }
                         </ol>
                     </div>
                 </div>

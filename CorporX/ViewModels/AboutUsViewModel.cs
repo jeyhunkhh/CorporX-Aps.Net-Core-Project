@@ -19,6 +19,7 @@ namespace CorporX.ViewModels
         public List<AboutUsWorkProcessItems> AboutUsWorkProcessItems { get; set; }
         public List<Client> Clients { get; set; }
         public List<SliderItems> SliderItems { get; set; }
+        public BreadcrumbViewModel BreadcrumbViewModel { get; set; }
 
     }
 }

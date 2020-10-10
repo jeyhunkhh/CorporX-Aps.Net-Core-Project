@@ -27,7 +27,16 @@ namespace CorporX.Controllers
                 Clients = _context.Clients.ToList(),
                 ServicesDetailsHeaders = _context.ServicesDetailsHeaders.FirstOrDefault(),
                 ServisPromos = _context.ServisPromos.ToList(),
-                Settings = _context.Setting.FirstOrDefault()
+                Settings = _context.Setting.FirstOrDefault(),
+                BreadcrumbViewModel = new BreadcrumbViewModel
+                {
+                    Title = "Our Services",
+                    Links = new List<string>
+                    {
+                        "Home,home,index",
+                        "Services,services,index"
+                    }
+                }
             };
 
             return View(ServicesViewModel);
@@ -49,7 +58,7 @@ namespace CorporX.Controllers
                 _context.Messages.Add(message);
                 _context.SaveChanges();
 
-                return RedirectToAction("index", "services");
+                return RedirectToAction("index", "thanks");
             }
 
             return NoContent();   
@@ -66,7 +75,17 @@ namespace CorporX.Controllers
 
             ServicesDetialsViewModel servicesDetialsViewModel = new ServicesDetialsViewModel
             {
-                ServicesDetails = _context.ServicesDetail.FirstOrDefault(x=>x.Id == Id)
+                ServicesDetails = _context.ServicesDetail.FirstOrDefault(x=>x.Id == Id),
+                BreadcrumbViewModel = new BreadcrumbViewModel
+                {
+                    Title = "Services Details",
+                    Links = new List<string>
+                    {
+                        "Home,home,index",
+                        "Services,services,index",
+                        "Services-details,services,servicesdetails"
+                    }
+                }
             };
 
             return View(servicesDetialsViewModel);

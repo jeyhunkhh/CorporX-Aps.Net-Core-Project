@@ -2,6 +2,7 @@
 using CorporX.Models;
 using CorporX.Models.About;
 using CorporX.Models.AboutUs;
+using CorporX.Models.Blog;
 using CorporX.Models.FAQ;
 using CorporX.Models.Home;
 using CorporX.Models.Project;
@@ -55,5 +56,7 @@ namespace CorporX.Data
 
         public DbSet<FAQ> FAQs { get; set; }
         public DbSet<PricingFAQ> PricingFAQs { get; set; }
+
+        public DbSet<BlogLeft> BlogLefts { get; set; }
     }
 }

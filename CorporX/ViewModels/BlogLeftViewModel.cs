@@ -1,4 +1,4 @@
-﻿using CorporX.Models.Project;
+﻿using CorporX.Models.Blog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CorporX.ViewModels
 {
-    public class ProjectDetialsViewModel
+    public class BlogLeftViewModel
     {
-        public ProjectDetails ProjectDetails { get; set; }
+        public List<BlogLeft> BlogLefts { get; set; }
         public BreadcrumbViewModel BreadcrumbViewModel { get; set; }
 
     }

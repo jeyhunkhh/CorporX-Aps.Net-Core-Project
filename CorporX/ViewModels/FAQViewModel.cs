@@ -10,6 +10,7 @@ namespace CorporX.ViewModels
     {
         public List<FAQ> FAQs { get; set; }
         public List<PricingFAQ> PricingFAQs { get; set; }
+        public BreadcrumbViewModel BreadcrumbViewModel { get; set; }
 
     }
 }
