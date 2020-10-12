@@ -352,3 +352,8 @@ C:\Users\Ceyhun\Desktop\CorporX-Aps.Net-Core-Project\CorporX\bin\Debug\netcoreap
 C:\Users\Ceyhun\Desktop\CorporX-Aps.Net-Core-Project\CorporX\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\Ceyhun\Desktop\CorporX-Aps.Net-Core-Project\CorporX\obj\Debug\netcoreapp3.1\CorporX.csproj.CoreCompileInputs.cache
 C:\Users\Ceyhun\Desktop\CorporX-Aps.Net-Core-Project\CorporX\obj\Debug\netcoreapp3.1\CorporX.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Ceyhun\Desktop\CorporX-Aps.Net-Core-Project\CorporX\obj\Debug\netcoreapp3.1\Razor\Areas\Control\Views\HomeHeaders\Create.cshtml.g.cs
+C:\Users\Ceyhun\Desktop\CorporX-Aps.Net-Core-Project\CorporX\obj\Debug\netcoreapp3.1\Razor\Areas\Control\Views\HomeHeaders\Delete.cshtml.g.cs
+C:\Users\Ceyhun\Desktop\CorporX-Aps.Net-Core-Project\CorporX\obj\Debug\netcoreapp3.1\Razor\Areas\Control\Views\HomeHeaders\Details.cshtml.g.cs
+C:\Users\Ceyhun\Desktop\CorporX-Aps.Net-Core-Project\CorporX\obj\Debug\netcoreapp3.1\Razor\Areas\Control\Views\HomeHeaders\Edit.cshtml.g.cs
+C:\Users\Ceyhun\Desktop\CorporX-Aps.Net-Core-Project\CorporX\obj\Debug\netcoreapp3.1\Razor\Areas\Control\Views\HomeHeaders\Index.cshtml.g.cs
