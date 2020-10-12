@@ -57,6 +57,10 @@ namespace CorporX.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Photo")
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(100)")
@@ -173,7 +177,6 @@ namespace CorporX.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Photo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
@@ -200,7 +203,6 @@ namespace CorporX.Migrations
                         .HasMaxLength(100);
 
                     b.Property<string>("Photo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
@@ -230,7 +232,6 @@ namespace CorporX.Migrations
                         .HasMaxLength(300);
 
                     b.Property<string>("Photo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
@@ -242,6 +243,36 @@ namespace CorporX.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("BlogLefts");
+                });
+
+            modelBuilder.Entity("CorporX.Models.ControlAccount", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Token")
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ControlAccounts");
                 });
 
             modelBuilder.Entity("CorporX.Models.FAQ.FAQ", b =>
@@ -301,7 +332,6 @@ namespace CorporX.Migrations
                         .HasMaxLength(300);
 
                     b.Property<string>("Photo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
@@ -368,7 +398,6 @@ namespace CorporX.Migrations
                         .HasMaxLength(25);
 
                     b.Property<string>("Photo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
@@ -422,7 +451,6 @@ namespace CorporX.Migrations
                         .HasMaxLength(50);
 
                     b.Property<string>("Photo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
@@ -569,7 +597,6 @@ namespace CorporX.Migrations
                         .HasMaxLength(100);
 
                     b.Property<string>("Photo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
@@ -604,7 +631,6 @@ namespace CorporX.Migrations
                         .HasMaxLength(100);
 
                     b.Property<string>("Phone")
-                        .IsRequired()
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
@@ -646,7 +672,6 @@ namespace CorporX.Migrations
                         .HasMaxLength(100);
 
                     b.Property<string>("Photo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
@@ -668,7 +693,6 @@ namespace CorporX.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Photo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
@@ -715,7 +739,6 @@ namespace CorporX.Migrations
                         .HasMaxLength(500);
 
                     b.Property<string>("Photo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
@@ -783,8 +806,8 @@ namespace CorporX.Migrations
                         .HasMaxLength(500);
 
                     b.Property<string>("Photo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
 
                     b.Property<string>("ShowContent")
                         .IsRequired()

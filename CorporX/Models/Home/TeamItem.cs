@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CorporX.Models.Home
 {
@@ -22,7 +20,6 @@ namespace CorporX.Models.Home
         [MaxLength(300)]
         public string Content { get; set; }
 
-        [Required]
         [MaxLength(100)]
         public string Photo { get; set; }
 
@@ -37,5 +34,8 @@ namespace CorporX.Models.Home
         [Required]
         [MaxLength(100)]
         public string Dribbble { get; set; }
+
+        [NotMapped]
+        public IFormFile Upload { get; set; }
     }
 }

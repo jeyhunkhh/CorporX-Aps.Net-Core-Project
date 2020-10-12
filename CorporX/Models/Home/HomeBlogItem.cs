@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CorporX.Models.Home
 {
@@ -17,7 +15,7 @@ namespace CorporX.Models.Home
         [MaxLength(25)]
         public string Label { get; set; }
 
-        [Required]
+        
         [MaxLength(100)]
         public string Photo { get; set; }
 
@@ -25,5 +23,7 @@ namespace CorporX.Models.Home
         [Column(TypeName = "date")]
         public DateTime AddDateTime { get; set; }
 
+        [NotMapped]
+        public IFormFile Upload { get; set; }
     }
 }

@@ -475,7 +475,7 @@ jQuery(function ($) {
     submitMSG(true, '.sign-up-form-wrap');
   }
 
-   18. Contact Form
+    
   if($("#contactForm").length) {
     $("#contactForm").validator().on("submit", function (event) {
         if (event.isDefaultPrevented()) {

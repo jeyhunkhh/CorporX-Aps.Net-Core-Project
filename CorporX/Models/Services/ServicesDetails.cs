@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CorporX.Models.Services
 {
@@ -13,7 +10,7 @@ namespace CorporX.Models.Services
         [Required]
         [MaxLength(100)]
         public string Title { get; set; }
-        [Required]
+        [MaxLength(100)]
         public string Photo { get; set; }
         [Required]
         [Column(TypeName = "ntext")]
@@ -27,6 +24,7 @@ namespace CorporX.Models.Services
         [Required]
         [MaxLength(100)]
         public string ShowIcon { get; set; }
-
+        [NotMapped]
+        public IFormFile Upload { get; set; }
     }
 }

@@ -9,7 +9,7 @@
             <div class="row justify-content-between">
                 <div class="col-md-12 col-lg-8">
                     <div class="img-wrap mb-md-4 mb-lg-0">
-                        <img src="https://res.cloudinary.com/djsws5hil/image/upload/v1602055679/CorporX/hero-bg7_of9gzb.jpg" alt="project" class="img-fluid rounded shadow-sm" />
+                        <img src="~/uploads/hero-bg7.jpg" alt="project" class="img-fluid rounded shadow-sm" />
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-4">
@@ -47,32 +47,36 @@
             <div class="row mt-5">
                 <div class="col-md-6">
                     <div class="project-details-feature">
-                        @foreach (var item in Model.ProjectDetails.List.Split(",").Take(3))
-                        {
-                            <li class="py-1">
-                                <span class="ti-control-forward mr-2 color-secondary"></span>
-                                <strong>@item.Split(" ")[0]</strong>
-                                @foreach (var text in @item.Split(" ").Skip(1))
-                                {
-                                    @(text + " ")
-                                }
-                            </li>
-                        }
+                        <ul class="list-unstyled tech-feature-list">
+                            @foreach (var item in Model.ProjectDetails.List.Split(",").Take(4))
+                            {
+                                <li class="py-1">
+                                    <span class="ti-control-forward mr-2 color-secondary"></span>
+                                    <strong>@item.Split(" ")[0]</strong>
+                                    @foreach (var text in @item.Split(" ").Skip(1))
+                                    {
+                                        @(text + " ")
+                                    }
+                                </li>
+                            }
+                        </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="project-details-feature">
-                        @foreach (var item in Model.ProjectDetails.List.Split(",").Skip(3).Take(3))
-                        {
-                            <li class="py-1">
-                                <span class="ti-control-forward mr-2 color-secondary"></span>
-                                <strong>@item.Split(" ")[0]</strong>
-                                @foreach (var text in @item.Split(" ").Skip(1))
-                                {
-                                    @(text + " ")
-                                }
-                            </li>
-                        }
+                        <ul class="list-unstyled tech-feature-list">
+                            @foreach (var item in Model.ProjectDetails.List.Split(",").Skip(4).Take(4))
+                            {
+                                <li class="py-1">
+                                    <span class="ti-control-forward mr-2 color-secondary"></span>
+                                    <strong>@item.Split(" ")[0]</strong>
+                                    @foreach (var text in @item.Split(" ").Skip(1))
+                                    {
+                                        @(text + " ")
+                                    }
+                                </li>
+                            }
+                        </ul>
                     </div>
                 </div>
             </div>

@@ -58,5 +58,8 @@ namespace CorporX.Data
         public DbSet<PricingFAQ> PricingFAQs { get; set; }
 
         public DbSet<BlogLeft> BlogLefts { get; set; }
+
+        public DbSet<ControlAccount> ControlAccounts { get; set; }
+
     }
 }
