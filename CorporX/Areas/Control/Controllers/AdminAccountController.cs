@@ -3,13 +3,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using CorporX.Areas.Control.Models;
 using CorporX.Data;
+using CorporX.Filters;
 using CorporX.Models;
 using CryptoHelper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CorporX.Areas.Control.Controllers
 {
-    
     [Area("Control")]
     public class AdminAccountController : Controller
     {

@@ -26,7 +26,6 @@
                                 <input asp-for="Upload" class="custom-file-input">
                                 <label asp-for="Upload" class="custom-file-label">Choose file</label>
                                 <span asp-validation-for="Upload" class="text-danger"></span>
-
                             </div>
 
                             <div class="form-group">
@@ -49,10 +48,10 @@
                     </div>
                 </div>
                 <div>
-                    <a asp-action="Index">Back to List</a>
+                    <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
                 </div>
 
-            </div>
+            </div> 
         </row>
     </container>
 </section>
@@ -71,6 +70,7 @@
                 };
                 fileReader.readAsDataURL(file, "UTF-8");
             });
+
         });
     </script>
 }

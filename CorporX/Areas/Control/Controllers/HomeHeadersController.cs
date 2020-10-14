@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CorporX.Data;
 using CorporX.Models.Home;
 using CorporX.Helpers;
 using System.IO;
+using CorporX.Filters;
 
 namespace CorporX.Areas.Control.Controllers
 {
+    [TypeFilter(typeof(Auth))]
     [Area("Control")]
     public class HomeHeadersController : Controller
     {
@@ -95,7 +94,7 @@ namespace CorporX.Areas.Control.Controllers
         // POST: Control/HomeHeaders/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Heading,Upload,Id,Title,Content")] HomeHeader homeHeader)
+        public async Task<IActionResult> Edit(int id, [Bind("Heading,Photo,Upload,Id,Title,Content")] HomeHeader homeHeader)
         {
             if (id != homeHeader.Id)
             {
@@ -111,8 +110,11 @@ namespace CorporX.Areas.Control.Controllers
             {
                 try
                 {
+                    var oldFile = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", homeHeader.Photo);
+                    _fileManager.Delete(oldFile);
                     var fileName = _fileManager.Upload(homeHeader.Upload);
                     homeHeader.Photo = fileName;
+                    
                     _context.Update(homeHeader);
                     await _context.SaveChangesAsync();
                 }
