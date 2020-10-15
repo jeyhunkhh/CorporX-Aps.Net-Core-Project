@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CorporX.Models.Account>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Control/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section>
+    <container>
+        <row>
+            <div class="px-4">
+                <h1 class="text-primary">Account</h1>
+
+                <p class="d-flex justify-content-end">
+                    <a asp-action="Create" class="text-success pr-3"><i class="fas fa-plus-circle" style="font-size:25px"></i></a>
+                </p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.FullName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Email)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FullName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td class="d-flex flex-row">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="text-primary mr-2"><i class="far fa-edit"></i></a>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="text-warning mr-2"><i class="fas fa-info-circle"></i></a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="text-danger mr-4"><i class="fas fa-trash-alt"></i></a>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </row>
+    </container>
+</section>

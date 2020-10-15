@@ -4,14 +4,16 @@ using CorporX.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CorporX.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201015081730_AdminAccountDeleteDatabase")]
+    partial class AdminAccountDeleteDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -247,15 +249,6 @@ namespace CorporX.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Accounts");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Email = "admin@admin",
-                            FullName = "admin",
-                            Password = "AQAAAAEAACcQAAAAEJ0HhqmpriXF6GMyiXjaj+9M2d2XhaR5MxbJ70aMsU5gxyrtydJopuOFMCqa7rw/pw=="
-                        });
                 });
 
             modelBuilder.Entity("CorporX.Models.Blog.BlogLeft", b =>

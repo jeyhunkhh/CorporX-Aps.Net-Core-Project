@@ -1,9 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CorporX.Areas.Control.Models
+namespace CorporX.Models
 {
-    public class LoginViewModel
+    public class Account
     {
+        public int Id { get; set; }
+        [Required]
+        [MaxLength(100)]
+        public string FullName { get; set; }
+
         [Required]
         [MaxLength(100)]
         [EmailAddress]
@@ -11,7 +16,9 @@ namespace CorporX.Areas.Control.Models
 
         [Required]
         [MinLength(6)]
-        [DataType(DataType.Password)]
         public string Password { get; set; }
+
+        [MaxLength(100)]
+        public string Token { get; set; }
     }
 }

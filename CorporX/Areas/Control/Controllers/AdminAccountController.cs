@@ -21,17 +21,15 @@ namespace CorporX.Areas.Control.Controllers
 
         public IActionResult Login()
         {
-
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
-
             if (ModelState.IsValid)
             {
-                ControlAccount user = _context.ControlAccounts.FirstOrDefault(u => u.Email == model.Email);
+                Account user = _context.Accounts.FirstOrDefault(u => u.Email == model.Email);
 
                 if(user != null)
                 {
@@ -54,15 +52,14 @@ namespace CorporX.Areas.Control.Controllers
             return View(model);
         }
 
-
         public IActionResult LogOut(int Id)
         {
-            ControlAccount user = _context.ControlAccounts.FirstOrDefault(x=>x.Id == Id);
+            Account user = _context.Accounts.FirstOrDefault(x=>x.Id == Id);
 
             if(user != null)
             {
-                user.Token = "Null";
-                return RedirectToAction("index", "adminaccount");
+                Response.Cookies.Delete("token");   
+                return RedirectToAction("login", "adminaccount");
             }
 
             return NoContent();

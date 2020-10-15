@@ -10,6 +10,7 @@ using CorporX.Filters;
 
 namespace CorporX.Areas.Control.Controllers
 {
+
     [TypeFilter(typeof(Auth))]
     [Area("Control")]
     public class HomeHeadersController : Controller

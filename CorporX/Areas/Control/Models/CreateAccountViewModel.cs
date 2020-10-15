@@ -1,24 +1,24 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CorporX.Models
+namespace CorporX.Areas.Control.Models
 {
-    public class ControlAccount
+    public class CreateAccountViewModel
     {
-        public int Id { get; set; }
         [Required]
         [MaxLength(100)]
         public string FullName { get; set; }
-
         [Required]
         [MaxLength(100)]
         [EmailAddress]
         public string Email { get; set; }
-
         [Required]
         [MinLength(6)]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
-
-        [MaxLength(100)]
-        public string Token { get; set; }
+        [Required]
+        [MinLength(6)]
+        [Compare("Password")]
+        [DataType(DataType.Password)]
+        public string ConfirmPassword { get; set; }
     }
 }

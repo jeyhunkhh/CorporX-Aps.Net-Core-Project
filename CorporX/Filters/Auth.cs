@@ -24,7 +24,7 @@ namespace CorporX.Filters
                 context.Result = new RedirectToRouteResult(new RouteValueDictionary(new { action = "login", controller = "adminaccount" }));
             }
 
-            var user = _context.ControlAccounts.FirstOrDefault(u => u.Token == token);
+            var user = _context.Accounts.FirstOrDefault(u => u.Token == token);
 
             if (user == null)
             {

@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace CorporX.Data
 {
-    public class ApplicationDbContext : DbContext 
+    public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
@@ -59,7 +59,21 @@ namespace CorporX.Data
 
         public DbSet<BlogLeft> BlogLefts { get; set; }
 
-        public DbSet<ControlAccount> ControlAccounts { get; set; }
+        public DbSet<Account> Accounts { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Account>().HasData(
+                new Account
+                {
+                    Id = 1,
+                    Email = "admin@admin",
+                    FullName = "admin",
+                    Password = "AQAAAAEAACcQAAAAEJ0HhqmpriXF6GMyiXjaj+9M2d2XhaR5MxbJ70aMsU5gxyrtydJopuOFMCqa7rw/pw=="
+                });
+        }
     }
+
 }
