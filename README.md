@@ -1,4 +1,4 @@
 # CorporX-Aps.Net-Core-Project
 
-# Login: admin@admin
-# Password: 123123
+### Login: admin@admin
+### Password: 123123
